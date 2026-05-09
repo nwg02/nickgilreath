@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System | Nick Gilreath</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <style>
+        body,
+        a,
+        button,
+        .card--project,
+        .card--techstack,
+        #email-text {
+            cursor: none !important;
+        }
+
+        @media (max-width: 768px) {
+            body,
+            a,
+            button,
+            .card--project,
+            .card--techstack,
+            #email-text {
+                cursor: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div class="bg-decoration bg-decoration-1"></div>
+    <div class="bg-decoration bg-decoration-2"></div>
+    <div class="bg-decoration bg-decoration-3"></div>
+    <div class="bg-decoration bg-decoration-4"></div>
+    <div class="bg-decoration bg-decoration-5"></div>
+    <div class="bg-decoration bg-decoration-6"></div>
+    <div class="bg-decoration bg-decoration-7"></div>
+
+    <div id="container--main">
+
+        <section class="section--page">
+            <a href="index.html">&#8592; Back to Portfolio</a>
+        </section>
+
+        <section class="section--page">
+            <h1>Employee Management System</h1>
+            <p>
+                A team-based software engineering project for Company “2” focused on designing and implementing
+                a minimal working Employee Management System using Java, JDBC, and MySQL. The system provides a
+                console-based UX for managing employee records, updating salary data, searching employees, and
+                generating payroll-related reports.
+            </p>
+        </section>
+
+        <section class="section--page">
+            <h2>Project Snapshot</h2>
+            <div id="wrapper--techstack__items">
+                <div class="card--techstack"><span><strong>Team:</strong> SoftDev-1</span></div>
+                <div class="card--techstack"><span><strong>Date:</strong> April 24, 2026</span></div>
+                <div class="card--techstack"><span><strong>Course Deliverable:</strong> Final Project</span></div>
+                <div class="card--techstack"><span><strong>Stack:</strong> Java, JDBC, MySQL, SQL</span></div>
+                <div class="card--techstack"><span><strong>UX:</strong> Console-Based Interface</span></div>
+                <div class="card--techstack"><span><strong>Database:</strong> employeeData</span></div>
+            </div>
+        </section>
+
+        <section class="section--page">
+            <h2>Project Requirements</h2>
+            <p>
+                The project scenario required a minimal working employee management system for a small company
+                with fewer than twenty full-time employees. The company had no GUI/UX and needed a working system
+                connected to a MySQL database for managing employee data and generating reports.
+            </p>
+
+            <ul id="qualifications--list">
+                <li>✔️ Add an SSN column to the employee table</li>
+                <li>✔️ Search for employees by name, SSN, or employee ID</li>
+                <li>✔️ Update employee data</li>
+                <li>✔️ Increase salary by a percentage within a salary range</li>
+                <li>✔️ Generate report: full-time employee information with pay statement history</li>
+                <li>✔️ Generate report: total monthly pay by job title</li>
+                <li>✔️ Generate report: total monthly pay by division</li>
+                <li>✔️ No authentication or authorization required</li>
+            </ul>
+        </section>
+
+        <section class="section--page">
+            <h2>My Role / Contribution</h2>
+            <p>
+                This project demonstrates my work in software design, backend logic, test planning, and technical
+                documentation for a database-driven Java application. It includes project documentation, DAO-aligned
+                test cases, SQL/database artifacts, Java source files, and a video demonstration of the working system.
+            </p>
+        </section>
+
+        <section class="section--page">
+            <h2>Implemented Features</h2>
+            <ul id="qualifications--list">
+                <li>✔️ Search employee records using exact full name, SSN, or empID</li>
+                <li>✔️ Add new employee records to the employeeData MySQL database</li>
+                <li>✔️ Update employee contact data such as email and phone number</li>
+                <li>✔️ Perform a full employee update for salary, job title, and division</li>
+                <li>✔️ Apply salary increases using minimum and maximum range boundaries</li>
+                <li>✔️ View pay statement history by employee</li>
+                <li>✔️ Generate payroll summary reports by division and by job title</li>
+            </ul>
+        </section>
+
+        <section class="section--page">
+            <h2>System Architecture</h2>
+            <p>
+                The Employee Management System uses a layered modular design with a console-based UI,
+                a Java application/data-access layer, and a MySQL backend. JDBC is used to connect the
+                Java application to the relational database.
+            </p>
+
+            <ul id="qualifications--list">
+                <li><strong>Main.java</strong> – handles user input, menu options, and program flow</li>
+                <li><strong>Employee.java</strong> – models employee data and formatted output</li>
+                <li><strong>EmployeeDAO.java</strong> – contains JDBC queries and business/data operations</li>
+                <li><strong>DatabaseConnection.java</strong> – provides reusable database connectivity</li>
+            </ul>
+        </section>
+
+        <section class="section--page">
+            <h2>Database Design</h2>
+            <p>
+                The database centers on the <strong>employee</strong> table and its relationships with
+                <strong>division</strong>, <strong>jobTitle</strong>, and <strong>payStatement</strong>.
+                This supports employee lookup, pay history, and grouped reporting across organizational units.
+            </p>
+
+            <img 
+                src="./assets/images/SQL_Diagram_Project_NickGilreath.png" 
+                alt="Employee Management System schema diagram"
+                style="width:100%; border-radius:8px; border:1px solid var(--mainBorderColor); margin-top:1em;"
+            >
+        </section>
+
+        <section class="section--page">
+            <h2>Documentation</h2>
+
+            <div class="card--project">
+                <a href="./assets/SWDD_Project_NickGilreath.pdf" target="_blank">
+                    <span>📘 </span>Software Design Document
+                </a>
+                <p>
+                    Formal design documentation covering system overview, architecture, data dictionary,
+                    component design, human interface design, and the requirements matrix.
+                </p>
+            </div>
+
+            <div class="card--project">
+                <a href="./assets/Test_Cases_Project_NickGilreath.pdf" target="_blank">
+                    <span>📄 </span>Test Cases Document
+                </a>
+                <p>
+                    Structured test cases for employee update, search, and salary update functionality,
+                    including happy paths, edge cases, and database validation behavior.
+                </p>
+            </div>
+        </section>
+
+        <section class="section--page">
+            <h2>Programming Tasks & Testing</h2>
+            <p>
+                The project requirements called for detailed programming tasks and pass/fail test cases.
+                The submitted testing materials focus on three major functional areas:
+            </p>
+
+            <ul id="qualifications--list">
+                <li><strong>(a)</strong> Update employee data</li>
+                <li><strong>(b)</strong> Search for employee</li>
+                <li><strong>(c)</strong> Update salary for employees within a specified range</li>
+            </ul>
+
+            <p>
+                These tests validate both direct method behavior and resulting database state using SQL verification.
+                They include boundary cases, missing employee IDs, no-result searches, and empty salary ranges.
+            </p>
+        </section>
+
+        <section class="section--page">
+            <h2>Source Code</h2>
+
+            <div class="card--project">
+                <a href="./assets/code/Main.java" target="_blank">
+                    <span>💻 </span>Main.java
+                </a>
+                <p>Application entry point and console UX for selecting and executing EMS features.</p>
+            </div>
+
+            <div class="card--project">
+                <a href="./assets/code/Employee.java" target="_blank">
+                    <span>💻 </span>Employee.java
+                </a>
+                <p>Data model for employee records, including identifying and display information.</p>
+            </div>
+
+            <div class="card--project">
+                <a href="./assets/code/EmployeeDAO.java" target="_blank">
+                    <span>💻 </span>EmployeeDAO.java
+                </a>
+                <p>Primary data access layer for employee search, insert, update, salary adjustment, and reporting.</p>
+            </div>
+
+            <div class="card--project">
+                <a href="./assets/code/DatabaseConnection.java" target="_blank">
+                    <span>💻 </span>DatabaseConnection.java
+                </a>
+                <p>JDBC connection manager used throughout the system for database operations.</p>
+            </div>
+        </section>
+
+        <section class="section--page">
+            <h2>SQL Files</h2>
+
+            <div class="card--project">
+                <a href="./assets/sql/table-Creation.sql" target="_blank">
+                    <span>🗄️ </span>Schema SQL
+                </a>
+                <p>Creates the database structure, tables, keys, and relationships used in the system.</p>
+            </div>
+
+            <div class="card--project">
+                <a href="./assets/sql/data-Insert.sql" target="_blank">
+                    <span>🗄️ </span>Seed / Data SQL
+                </a>
+                <p>Populates the database with sample employee, division, job title, and pay statement data.</p>
+            </div>
+        </section>
+
+        <section class="section--page">
+            <h2>Demo Video</h2>
+            <div class="card--project">
+                <a href="./assets/video/SoftwareDevProject.mp4" target="_blank">
+                    <span>🎥 </span>Project Demonstration Video
+                </a>
+                <p>
+                    Recorded walkthrough of the working system demonstrating core features such as search,
+                    update, insert, and reporting.
+                </p>
+            </div>
+        </section>
+
+        <section class="section--page">
+            <h2>Deliverables Included</h2>
+            <ul id="qualifications--list">
+                <li>✔️ Software Design Document (PDF)</li>
+                <li>✔️ Test Cases Document (PDF)</li>
+                <li>✔️ Java source files</li>
+                <li>✔️ SQL database files</li>
+                <li>✔️ Schema diagram image</li>
+                <li>✔️ Video demonstration</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script>
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        if (cursorDot && cursorOutline && window.innerWidth > 768) {
+            let mouseX = window.innerWidth / 2;
+            let mouseY = window.innerHeight / 2;
+            let outlineX = mouseX;
+            let outlineY = mouseY;
+
+            cursorDot.style.left = `${mouseX}px`;
+            cursorDot.style.top = `${mouseY}px`;
+            cursorOutline.style.left = `${outlineX}px`;
+            cursorOutline.style.top = `${outlineY}px`;
+
+            window.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+
+                cursorDot.style.left = `${mouseX}px`;
+                cursorDot.style.top = `${mouseY}px`;
+            });
+
+            function animateCursor() {
+                outlineX += (mouseX - outlineX) * 0.12;
+                outlineY += (mouseY - outlineY) * 0.12;
+
+                cursorOutline.style.left = `${outlineX}px`;
+                cursorOutline.style.top = `${outlineY}px`;
+
+                requestAnimationFrame(animateCursor);
+            }
+
+            animateCursor();
+
+            const interactiveElements = document.querySelectorAll('a, button, .card--project, .card--techstack');
+
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    document.body.classList.add('cursor-hover');
+                });
+
+                el.addEventListener('mouseleave', () => {
+                    document.body.classList.remove('cursor-hover');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
